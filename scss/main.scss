@@ -1,117 +1,53 @@
 @import "colours";
 @import "breakpoints";
 @import "type";
+@import "banner";
 @import "footer";
 
 body {
   font-family: 'Open Sans', sans-serif;
   color: $text-colour;
+  overflow-x: hidden;
 }
 
-.banner {
-  font-weight: 600;
-  background-color: $primary-colour;
-  color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.page {
+  max-width: 770px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3vmin 5vmin;
 
-  & > div {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
+  p {
+    line-height: 1.6;
+  }
+
+  a {
+    color: $primary-colour;
+  }
+
+  section {
     position: relative;
-  }
+    padding-top: 2vmin;
+    padding-bottom: 2vmin;
 
-  header {
-    display: table;
-    width: 100%;
-    height: 100vh;
-    text-align: center;
+    &:nth-child(even) {
+      background-color: lighten($primary-colour,37%);
 
-    & > div {
-      display: table-cell;
-      vertical-align: middle;
-    }
-
-    h1 {
-      margin: 0;
-
-      @media (min-width: $sm-w) {
-        font-size: 5vw;
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        background-color: lighten($primary-colour,37%);
       }
-
-      span {
-        display: inline-block;
-        background-color: #fff;
-        color: $secondary-colour;
-        padding: 0.2em 0.5em;
+      &:before {
+        right: 100%;
       }
-    }
-
-    p {
-      display: block;
-
-      @media (min-width: $sm-w) {
-        font-size: 1.75vw;
+      &:after {
+        left: 100%;
       }
-
-      span {
-        display: inline-block;
-        background-color: $secondary-colour;
-        color: #fff;
-        padding: 0.2em 0.5em;
-      }
-    }
-  }
-
-  nav {
-    position: absolute;
-    top: 1vh;
-    right: 0;
-
-    ul {
-      margin: 10px;
-      padding: 0;
-
-      li {
-        display: inline-block;
-        padding: 10px;
-
-        a {
-          color: inherit;
-          opacity: 0.8;
-          text-decoration: none;
-          border-bottom: solid 4px #fff;
-
-          &:link {
-            &:hover {
-              opacity: 1;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .logos {
-    position: absolute;
-    left: 0;
-    bottom: 1vh;
-
-    a {
-      opacity: 0.8;
-      display: inline-block;
-      padding: 20px;
-
-      &:link {
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
-
-    img {
-      height: 8vh;
     }
   }
 }
