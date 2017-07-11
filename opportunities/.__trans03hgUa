@@ -403,17 +403,9 @@
         <span>€5,000</span>
         
       </div>
-    </div>
   </div>
-</section>
-<footer class="contact">
-  <div>
-    <h2>Contact details</h2>
-    <p><a href="mailto:sponsors@okfestival.org">sponsors@okfestival.org</a></p>
-<p><a href="mailto:info@okfestival.org">info@okfestival.org</a></p>
 
-  </div>
-</footer>
+</section>
 
 
   <script src="../js/smooth-scroll.min.js"></script>
